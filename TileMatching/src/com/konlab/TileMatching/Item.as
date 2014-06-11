@@ -2,6 +2,7 @@ package com.konlab.TileMatching
 {
 	import flash.display.Shape;
 	import flash.display.Sprite;
+	import flash.events.MouseEvent;
 	
 	/**
 	 * ...
@@ -39,6 +40,19 @@ package com.konlab.TileMatching
 			
 			addChild(_shape);
 			addChild(_debugShape);
+			
+			addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+			addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
+		}
+		
+		private function onMouseUp(e:MouseEvent):void 
+		{
+			trace("Mouse up on row : " + _row + " , column : " + _column);
+		}
+		
+		private function onMouseDown(e:MouseEvent):void 
+		{
+			trace("Mouse down on row : " + _row + " , column : " + _column);
 		}
 		
 		public function ChangeId(newId:int):void 

@@ -65,7 +65,5 @@ package com.konlab.TileMatching
 		{
 			_gameStage.CheckAndShowMatches();
 		}
-		
 	}
-	
 }
